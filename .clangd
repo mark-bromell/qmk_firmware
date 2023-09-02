@@ -2,3 +2,6 @@ CompileFlags:
   Add: [-Wno-unknown-attributes, -Wno-maybe-uninitialized, -Wno-unknown-warning-option]
   Remove: [-W*, -mcall-prologues]
   Compiler: clang
+
+Diagnostics:
+  Suppress: invalid_token_after_toplevel_declarator
