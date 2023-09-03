@@ -4,4 +4,9 @@ CompileFlags:
   Compiler: clang
 
 Diagnostics:
-  Suppress: invalid_token_after_toplevel_declarator
+  Suppress: [
+    invalid_token_after_toplevel_declarator,
+    undeclared_var_use,
+    expected_expression,
+    implicit-function-declaration
+  ]
