@@ -19,7 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "alias.h"
 #include "features/custom_shift_keys.h"
-#include "features/cross_platform.h"
 
 #pragma GCC diagnostic ignored "-Wimplicit-function-declaration"
 
@@ -27,10 +26,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BASE_LAYOUT = LAYOUT( \
         MV_FULL, NO_IMPL, NO_IMPL, NO_IMPL, NO_IMPL, NO_IMPL, NO_IMPL, NO_IMPL, NO_IMPL, NO_IMPL, NO_IMPL, NO_IMPL, NO_IMPL, QK_BOOT,          KC_MUTE, \
         KC_CAPS, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_INS,  KC_DEL,  KC_BSPC,          NO_IMPL, \
-        KC_LCTL, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_RCTL, KC_TAB,  ALT_TAB,          NO_IMPL, \
+        KC_LCTL, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    CTL_ESC, KC_TAB,  ALT_TAB,          NO_IMPL, \
         MO(1),   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_DQUO, MO(3),            KC_ENT,           NO_IMPL, \
-        KC_LSFT,          KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLASH,         KC_RSFT, NO_IMPL, NO_IMPL, \
-        KC_LALT, WINDOWS, KC_LGUI,                            KC_SPC,                             KC_RGUI, MAC,     KC_RALT, NO_IMPL, NO_IMPL, NO_IMPL \
+        KC_LSFT,          KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLASH,         KC_RSFT, KC_UP,   NO_IMPL, \
+        KC_LALT, WINDOWS, KC_LGUI,                            KC_SPC,                             KC_RGUI, MAC,     KC_RALT, KC_LEFT, KC_DOWN, KC_RGHT \
     )
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -42,9 +41,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT(
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_RBT,           XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  CTL_OPT,          MV_2TL,
-        KC_TRNS, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, NO_IMPL, KC_LCBR, KC_RCBR, KC_PIPE, KC_BSLS, KC_RALT, KC_TRNS, MV_ALL,           MV_1TR,
-        _______, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, KC_HASH, KC_LPRN, KC_RPRN, KC_COLN, KC_ESC,  NO_IMPL,          NO_IMPL,          MV_TOPR,
-        KC_TRNS,          CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, KC_PERC, KC_DLR,  ARROW,   EARROW,  NO_IMPL,          MV_WSR,  MV_MAX,  MV_BOTR,
+        KC_TRNS, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, NO_IMPL, KC_DLR,  KC_LCBR, KC_RCBR, KC_AT,   KC_RALT, KC_TRNS, MV_ALL,           MV_1TR,
+        _______, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, KC_EXLM, KC_LPRN, KC_RPRN, KC_COLN, KC_GRV,  NO_IMPL,          VI_SAVE,          MV_TOPR,
+        KC_TRNS,          CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, KC_SCLN, KC_HASH, ARROW,   EARROW,  UPDIR,            MV_WSR,  MV_MAX,  MV_BOTR,
         KC_TRNS, XXXXXXX, MO(5),                              NO_IMPL,                            XXXXXXX, XXXXXXX, XXXXXXX, MV_L,    MV_RSET, MV_R
     ),
 
@@ -53,9 +52,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [3] = LAYOUT(
         NO_IMPL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX,
         NO_IMPL, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX,
-        NO_IMPL, KC_CIRC, KC_PLUS, KC_LBRC, KC_RBRC, KC_AT,   CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, KC_TRNS, XXXXXXX, XXXXXXX,          XXXXXXX,
-        NO_IMPL, KC_MINS, KC_EQL,  KC_ASTR, KC_UNDS, KC_AMPR, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, _______,          XXXXXXX,          XXXXXXX,
-        MV_WSL,           KC_TILD, KC_EXLM, KC_LABK, KC_RABK, UPDIR,   CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD,          KC_TRNS, XXXXXXX, XXXXXXX,
+        NO_IMPL, NO_IMPL, KC_PERC, KC_LBRC, KC_RBRC, KC_BSLS, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, KC_TRNS, XXXXXXX, XXXXXXX,          XXXXXXX,
+        NO_IMPL, KC_PLUS, KC_MINS, KC_ASTR, KC_UNDS, KC_CIRC, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, _______,          XXXXXXX,          XXXXXXX,
+        MV_WSL,           KC_TILD, KC_EQL,  KC_PIPE, KC_AMPR, NO_IMPL, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD, CTL_CMD,          KC_TRNS, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX,                            NO_IMPL,                            NO_IMPL, XXXXXXX, KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
@@ -111,6 +110,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
         case UPDIR:
             if(record->event.pressed) {
                 SEND_STRING("../");
+            }
+            break;
+        case VI_SAVE:
+            if (record->event.pressed) {
+                tap_code16_delay(KC_ESCAPE, 10);
+                SEND_STRING_DELAY(":", 10);
+                SEND_STRING("w");
             }
             break;
 
