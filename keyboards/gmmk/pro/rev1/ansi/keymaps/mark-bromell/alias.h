@@ -1,43 +1,73 @@
 #pragma once
 
-#define NO_IMPL KC_NO
-#define CTL_ESC RCTL_T(KC_ESC)
+enum layers {
+    BASE,
+    SYM,
+    NUM,
+    NAV,
+    FUN,
+};
 
 enum custom_keycodes {
-    ARROW = SAFE_RANGE,
-    EARROW,
+    MY_DEBG = SAFE_RANGE,
+
     UPDIR,
+    COLON_2,
+    DOT_3,
+    QUOTE_3,
+    GRAVE_3,
+    WALRUS,
+    EURO,
+    END_SCL,
     VI_SAVE,
 
     WINDOWS,
     MAC,
-    CTL_CMD, // Ctrl or Cmd
-    CTL_OPT, // Ctrl or Opt
 
-    ALT_TAB,
-    MV_FULL_TOGGLE,
-    MV_MAX_SIZE,
-    MV_RESET_SIZE,
-    MV_SPLIT_LEFT,
-    MV_SPLIT_RIGHT,
-    MV_2THIRDS_LEFT,
-    MV_1THIRDS_RIGHT,
-    MV_TOP_RIGHT,
-    MV_BOTTOM_RIGHT,
-    MV_ALL,
-    MV_LEFT_WORKSPACE,
-    MV_RIGHT_WORKSPACE,
+    W_BACK,
+    W_DEL,
+    W_LEFT,
+    W_RIGHT,
+
+    MY_UNDO,
+    MY_REDO,
+    MY_COPY,
+    MY_PSTE,
+    MY_SALL,
+    MY_SAVE,
+    MY_FIND,
+    MY_FNXT,
+    MY_EDIT,
+
+    MV_FULL,
+    MV_L,
+    MV_R,
+    MV_2TL,
+    MV_1TR,
+    MV_EXIT,
+    MV_XTAB,
+    MV_NTAB,
+    MV_PTAB,
+    SEE_ALL,
+
+    WS_LEFT,
+    WS_RGHT,
+    WS_NEW,
 };
 
-// Aliases for custom window management keycodes
-#define MV_FULL MV_FULL_TOGGLE
-#define MV_MAX MV_MAX_SIZE
-#define MV_RSET MV_RESET_SIZE
-#define MV_L MV_SPLIT_LEFT
-#define MV_R MV_SPLIT_RIGHT
-#define MV_2TL MV_2THIRDS_LEFT
-#define MV_1TR MV_1THIRDS_RIGHT
-#define MV_TOPR MV_TOP_RIGHT
-#define MV_BOTR MV_BOTTOM_RIGHT
-#define MV_WSL MV_LEFT_WORKSPACE
-#define MV_WSR MV_RIGHT_WORKSPACE
+#define NO_IMPL KC_NO
+#define ALT_TAB LALT(KC_TAB)
+
+#define MOD_TAB LT(NAV, KC_TAB)
+#define MOD_S LCTL_T(KC_S)
+#define MOD_D LALT_T(KC_D)
+#define MOD_F LT(SYM, KC_F)
+#define MOD_G LT(NUM, KC_G)
+#define MOD_V LT(FUN, KC_V)
+#define MOD_H LT(NUM, KC_H)
+#define MOD_J LT(SYM, KC_J)
+#define MOD_K RALT_T(KC_K)
+#define MOD_L RCTL_T(KC_L)
+#define MOD_M LT(FUN, KC_M)
+#define LCK_NUM TO(NUM)
+#define LCK_NAV TO(NAV)
