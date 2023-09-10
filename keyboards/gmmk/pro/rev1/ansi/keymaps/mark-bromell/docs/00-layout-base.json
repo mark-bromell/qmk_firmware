@@ -1,10 +1,11 @@
 [
   {
-    "name": "00-layout-base"
+    "name": "00-layout-base",
+    "css": ""
   },
   [
     {
-      "c": "#ce6969",
+      "g": true,
       "p": "OEM",
       "a": 7
     },
@@ -28,61 +29,48 @@
     },
     "",
     "",
+    "",
+    "",
     {
-      "c": "#cccccc"
+      "x": 0.25,
+      "g": false
     },
-    "<i class='fa fa-windows'></i>",
-    "<i class='fa fa-apple'></i>",
-    {
-      "x": 0.25
-    },
-    "Boot"
+    "Boot Loader"
   ],
   [
     {
-      "y": 0.25
+      "y": 0.25,
+      "g": true
     },
-    "Caps Lock",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "0",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
     "",
     "",
     {
       "w": 2
     },
-    "Focus",
+    "",
     {
-      "x": 0.5,
-      "c": "#ce6969"
+      "x": 0.5
     },
     ""
   ],
   [
     {
-      "c": "#cccccc",
+      "g": false,
       "w": 1.5
     },
-    "Tab",
-    {
-      "a": 4,
-      "fa": [
-        0,
-        0,
-        1
-      ]
-    },
-    "\n\nXCtrl\n\n\n\n\n\n\nQ",
-    {
-      "a": 7
-    },
+    "_",
+    "Q",
     "W",
     "E",
     "R",
@@ -91,97 +79,102 @@
     "U",
     "I",
     "O",
-    {
-      "a": 4
-    },
-    "\n\nXCtrl\n\n\n\n\n\n\nP",
-    {
-      "a": 7
-    },
+    "P",
     "Back",
     "Delete",
     {
       "w": 1.5
     },
-    "",
+    "Alt + Tab",
     {
       "x": 0.5,
-      "c": "#ce6969"
+      "g": true
     },
     ""
   ],
   [
     {
-      "c": "#cccccc",
+      "g": false,
       "a": 4,
+      "fa": [
+        0,
+        0,
+        1
+      ],
       "w": 1.75
     },
-    "\n\nNav\n\n\n\n\n\n\n_",
-    "\n\nShift\n\n\n\n\n\n\nA",
+    "\n\nNav\n\n\n\n\n\n\nTab",
+    {
+      "a": 7
+    },
+    "A",
+    {
+      "a": 4
+    },
     "\n\nCtrl\n\n\n\n\n\n\nS",
     "\n\nAlt\n\n\n\n\n\n\nD",
     {
       "n": true
     },
     "\n\nSym\n\n\n\n\n\n\nF",
+    "\n\nNum\n\n\n\n\n\n\nG",
+    "\n\nNum\n\n\n\n\n\n\nH",
     {
-      "a": 7
-    },
-    "G",
-    "H",
-    {
-      "a": 4,
       "n": true
     },
     "\n\nSym\n\n\n\n\n\n\nJ",
     "\n\nAlt\n\n\n\n\n\n\nK",
     "\n\nCtrl\n\n\n\n\n\n\nL",
-    "'\n\"\nShift",
     {
       "a": 7
     },
-    "Enter",
+    "\"",
+    "Ret",
     {
       "w": 2.25
     },
     "Escape",
     {
       "x": 0.5,
-      "c": "#CE6969"
+      "g": true
     },
     ""
   ],
   [
     {
-      "c": "#cccccc",
-      "a": 4,
+      "g": false,
       "w": 2.25
     },
-    "\n\nNum\n\n\n\n\n\n\n=",
-    {
-      "a": 7
-    },
+    "Shift",
     "Z",
     "X",
     "C",
-    "V",
-    "B",
-    "N",
-    "M",
     {
       "a": 4
     },
-    "<\n,",
-    ">\n.",
-    "?\n/",
+    "\n\nFun\n\n\n\n\n\n\nV",
+    {
+      "a": 7
+    },
+    "B",
+    "N",
+    {
+      "a": 4
+    },
+    "\n\nFun\n\n\n\n\n\n\nM",
+    {
+      "a": 7
+    },
+    ",",
+    ".",
+    "/",
     {
       "w": 1.75
     },
-    "\n\nScreen\n\n\n\n\n\n\n:",
+    "Shift",
     {
       "x": 1.5,
-      "c": "#CE6969",
-      "a": 7
+      "g": true
     },
     ""
   ],
@@ -195,31 +188,31 @@
   [
     {
       "y": -0.25,
-      "c": "#cccccc",
+      "g": false,
       "w": 1.25
     },
     "GUI",
     {
       "w": 1.25
     },
-    "Shift",
+    "",
     {
       "w": 1.25
     },
-    "Nav Lock",
+    "Num Lock",
     {
       "w": 6.25
     },
     "",
-    "Num Lock",
+    "Nav Lock",
     "",
-    ""
+    "GUI"
   ],
   [
     {
       "y": -0.75,
       "x": 13.25,
-      "c": "#CE6969"
+      "g": true
     },
     "",
     "",
